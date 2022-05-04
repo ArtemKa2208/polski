@@ -12,6 +12,13 @@ type Props = {
 };
 
 export const Preview: React.FC<Props> = ({ numberOfQuestions, time }) => {
+  const getTime = () => {
+    const minutes = Math.trunc(time / 60);
+    const seconds = time - (minutes * 60);
+
+    return `${minutes} мин ${seconds} с`;
+  };
+
   return (
     <Container
       maxWidth="md"
@@ -101,7 +108,7 @@ export const Preview: React.FC<Props> = ({ numberOfQuestions, time }) => {
           }}
           >
             <Typography variant="h6">Время на выполнение</Typography>
-            <Typography variant="h4">{time}</Typography>
+            <Typography variant="h4">{getTime()}</Typography>
           </Box>
         </Box>
         <ModalStart />

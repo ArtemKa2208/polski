@@ -112,11 +112,14 @@ export const ModalStart: React.FC = () => {
             >
               Отмена
             </Button>
-            <Link to="/test">
+            <Link
+              to="/test"
+              className="link"
+            >
               <Button
                 variant="contained"
                 sx={{
-                  width: '45%',
+                  width: '100%',
                   ':hover': {
                     bgcolor: '#18d7ff',
                   },
