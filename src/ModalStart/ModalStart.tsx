@@ -112,7 +112,7 @@ export const ModalStart: React.FC = () => {
               Отмена
             </Button>
             <Button
-              href="/test"
+              to="/test"
               variant="contained"
               sx={{
                 width: '45%',

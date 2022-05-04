@@ -6,11 +6,13 @@ import { questionsFromServer } from './questions';
 import { PageTest } from './PageTest/PageTest';
 
 export const App: React.FC = () => {
+  const time = 80;
+
   return (
     <div className="app">
       <Routes>
-        <Route path="/test" element={<PageTest questionsFromServer={questionsFromServer} timer={80} />} />
-        <Route path="/" element={<Preview />} />
+        <Route path="/test" element={<PageTest questionsFromServer={questionsFromServer} timer={time} />} />
+        <Route path="/" element={<Preview numberOfQuestions={questionsFromServer.length} time={time} />} />
       </Routes>
     </div>
   );

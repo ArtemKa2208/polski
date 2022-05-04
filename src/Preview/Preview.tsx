@@ -6,7 +6,12 @@ import {
 } from '@mui/material';
 import { ModalStart } from '../ModalStart/ModalStart';
 
-export const Preview: React.FC = () => {
+type Props = {
+  numberOfQuestions: number,
+  time: number,
+};
+
+export const Preview: React.FC<Props> = ({ numberOfQuestions, time }) => {
   return (
     <Container
       maxWidth="md"
@@ -78,7 +83,7 @@ export const Preview: React.FC = () => {
           }}
           >
             <Typography variant="h6">Кол-во вопросов</Typography>
-            <Typography variant="h4">10</Typography>
+            <Typography variant="h4">{numberOfQuestions}</Typography>
           </Box>
           <Box
             sx={{
