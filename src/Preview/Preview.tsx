@@ -101,7 +101,7 @@ export const Preview: React.FC<Props> = ({ numberOfQuestions, time }) => {
           }}
           >
             <Typography variant="h6">Время на выполнение</Typography>
-            <Typography variant="h4">7 мин.</Typography>
+            <Typography variant="h4">{time}</Typography>
           </Box>
         </Box>
         <ModalStart />

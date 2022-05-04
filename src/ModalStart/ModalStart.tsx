@@ -6,6 +6,7 @@ import {
   IconButton,
   Modal, Typography,
 } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const style = {
   position: 'absolute',
@@ -111,19 +112,20 @@ export const ModalStart: React.FC = () => {
             >
               Отмена
             </Button>
-            <Button
-              to="/test"
-              variant="contained"
-              sx={{
-                width: '45%',
-                ':hover': {
+            <Link to="/test">
+              <Button
+                variant="contained"
+                sx={{
+                  width: '45%',
+                  ':hover': {
+                    bgcolor: '#18d7ff',
+                  },
                   bgcolor: '#18d7ff',
-                },
-                bgcolor: '#18d7ff',
-              }}
-            >
-              Начать тест
-            </Button>
+                }}
+              >
+                Начать тест
+              </Button>
+            </Link>
           </Box>
         </Box>
       </Modal>
