@@ -61,7 +61,7 @@ export const ModalStart: React.FC = () => {
         aria-labelledby="parent-modal-title"
         aria-describedby="parent-modal-description"
       >
-        <Box sx={{ ...style, width: 400 }}>
+        <Box sx={{ ...style, width: 300 }}>
           <IconButton
             aria-label="close"
             onClick={handleClose}

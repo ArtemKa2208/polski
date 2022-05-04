@@ -26,7 +26,6 @@ export const Preview: React.FC<Props> = ({ numberOfQuestions, time }) => {
         mt: '20px',
         bgcolor: '#f8f8f8',
         p: 2,
-        height: '550px',
         borderRadius: '25px',
         border: '1px solid #d9d8d8',
       }}
@@ -43,7 +42,6 @@ export const Preview: React.FC<Props> = ({ numberOfQuestions, time }) => {
       <Box
         sx={{
           backgroundColor: '#ff8560',
-          height: '70%',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-around',
@@ -69,24 +67,30 @@ export const Preview: React.FC<Props> = ({ numberOfQuestions, time }) => {
           sx={{
             color: '#ffffff',
             fontWeight: '500',
+            '@media (max-width: 460px)': {
+              fontSize: '30px',
+            },
           }}
         >
           Тест на время
         </Typography>
         <Box sx={{
           display: 'flex',
-          gap: '50px',
+          gap: '10px',
           color: '#fff',
           alignItems: 'center',
-          width: '100%',
-          justifyContent: 'center',
+          width: '80%',
+          justifyContent: 'space-around',
+          '@media (max-width: 700px)': {
+            flexDirection: 'column',
+          },
         }}
         >
           <Box sx={{
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            width: '30%',
+            width: '220px',
           }}
           >
             <Typography variant="h6">Кол-во вопросов</Typography>
@@ -97,6 +101,9 @@ export const Preview: React.FC<Props> = ({ numberOfQuestions, time }) => {
               width: '3px',
               bgcolor: 'white',
               height: '50px',
+              '@media (max-width: 700px)': {
+                display: 'none',
+              },
             }}
           >
           </Box>
@@ -104,7 +111,7 @@ export const Preview: React.FC<Props> = ({ numberOfQuestions, time }) => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            width: '30%',
+            width: '220px',
           }}
           >
             <Typography variant="h6">Время на выполнение</Typography>

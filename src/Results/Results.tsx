@@ -65,6 +65,9 @@ export const Results: React.FC<Props> = ({ answers, questions, time }) => {
           alignItem: 'center',
           color: 'white',
           fontWeight: '600',
+          '@media (max-width: 500px)': {
+            fontSize: '28px',
+          },
         }}
       >
         Тест завершен
@@ -75,6 +78,10 @@ export const Results: React.FC<Props> = ({ answers, questions, time }) => {
           gap: '20px',
           color: 'white',
           alignItems: 'center',
+          '@media (max-width: 760px)': {
+            flexDirection: 'column',
+            gap: '10px',
+          },
         }}
       >
         <Box
@@ -97,6 +104,11 @@ export const Results: React.FC<Props> = ({ answers, questions, time }) => {
             width: '2px',
             bgcolor: 'white',
             height: '45px',
+            '@media (max-width: 760px)': {
+              // display: 'none',
+              width: '70px',
+              height: '2px',
+            },
           }}
         >
         </Box>
@@ -120,6 +132,11 @@ export const Results: React.FC<Props> = ({ answers, questions, time }) => {
             width: '2px',
             bgcolor: 'white',
             height: '45px',
+            '@media (max-width: 760px)': {
+              // display: 'none',
+              width: '70px',
+              height: '2px',
+            },
           }}
         >
         </Box>
@@ -143,6 +160,11 @@ export const Results: React.FC<Props> = ({ answers, questions, time }) => {
             width: '2px',
             bgcolor: 'white',
             height: '45px',
+            '@media (max-width: 760px)': {
+              // display: 'none',
+              width: '70px',
+              height: '2px',
+            },
           }}
         >
         </Box>
@@ -166,6 +188,11 @@ export const Results: React.FC<Props> = ({ answers, questions, time }) => {
             width: '2px',
             bgcolor: 'white',
             height: '45px',
+            '@media (max-width: 760px)': {
+              // display: 'none',
+              width: '70px',
+              height: '2px',
+            },
           }}
         >
         </Box>

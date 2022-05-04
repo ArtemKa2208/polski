@@ -27,6 +27,9 @@ const style = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
+  '@media (max-width: 480px)': {
+    width: 300,
+  },
 };
 
 export const ModalSendQuiz: React.FC<Props> = ({ handleButton }) => {
@@ -67,7 +70,7 @@ export const ModalSendQuiz: React.FC<Props> = ({ handleButton }) => {
         aria-labelledby="parent-modal-title"
         aria-describedby="parent-modal-description"
       >
-        <Box sx={{ ...style, width: 400 }}>
+        <Box sx={{ ...style }}>
           <IconButton
             aria-label="close"
             onClick={handleClose}
@@ -113,6 +116,9 @@ export const ModalSendQuiz: React.FC<Props> = ({ handleButton }) => {
                 ':hover': {
                   bgcolor: '#e3e3e3',
                 },
+                '@media (max-width: 480px)': {
+                  fontSize: '10px',
+                },
               }}
             >
               Отмена
@@ -129,6 +135,9 @@ export const ModalSendQuiz: React.FC<Props> = ({ handleButton }) => {
                   bgcolor: '#18d7ff',
                 },
                 bgcolor: '#18d7ff',
+                '@media (max-width: 480px)': {
+                  fontSize: '10px',
+                },
               }}
             >
               Завершить тест
